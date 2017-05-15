@@ -12,6 +12,8 @@
  */
 
 // Your code here
+var imgList = ["image1.png", "image2.png", "image3.png"];
+console.log("Question 1: " + imgList);
 
 /**
  * Question 2
@@ -20,6 +22,8 @@
  */
 
 // Your code here
+var newImgList = imgList[0];
+console.log("Question 2: " + newImgList);
 
 /**
  * Question 3
@@ -28,6 +32,8 @@
  */
 
 // Your code here
+var lengthOfimgList = imgList.length;
+console.log("Question 3: " + lengthOfimgList);
 
 /**
  * Question 4
@@ -37,7 +43,8 @@
 
 
 // Your code here
-
+var lastArray = imgList[imgList.length-1];
+console.log("Question 4: " + lastArray);
 
 // ____________________________________________________________________________
 
@@ -55,6 +62,29 @@
  */
 
 // Your code here
+var Question5 = [1,2,3,4];
+for (var i =0; i < Question5.length; i++) {
+    Question5[i]++;
+};
+console.log("Question5: ", Question5);
+
+/*Note:
+- Alternative forEach
+var Question5 = [1,2,3,4];
+Question5.forEach(function (item, index) {
+    console.log(index,item );
+    Question5[index] = item + 1;
+});
+console.log("Question5: ", Question5);
+
+- Alternative map
+ var Question5 = [1,2,3,4].map(function(e){
+     console.log("e: ", e);
+     return e + 1;
+ });
+console.log("Question5: ", Question5);
+ */
+
 
 
 /**
@@ -65,3 +95,12 @@
 
 
 // Your code here
+
+    var total = 0;
+    //average
+    for (var i = 0; i < Question5.length; i++) {
+         //console.log(Question5[i]);
+        total += Question5[i];
+    };
+    var average = total / (Question5.length);
+    console.log("Question6: " , average);
