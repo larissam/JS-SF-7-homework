@@ -2,7 +2,7 @@ JavaScript Development Homework Repository
 =============================
 
 Office hours:<br>
-Mondays & Wednesdays from 5:30-6:30, location TBA.
+Mondays & Wednesdays from 5:30-6:30, classroom 3 (please Slack me if you can't find me).
 
 [Homework table](#weekly-homework) is updated weekly.
 
