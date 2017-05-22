@@ -47,5 +47,10 @@ Weekly Homework
 00 | CodeAcademy's JavaScript Fundamentals, and Try Git exercise | [00-installfest](https://github.com/svodnik/JS-SF-7-resources/tree/master/00-installfest#homework-due-monday-26) | Mon, 5/8 |
 01 | 99 Bottles of Beer | [02-data-types-loops](https://github.com/svodnik/JS-SF-7-resources/tree/master/02-data-types-loops#homework-due-monday-515) | Mon, 5/15 |
 02 | FizzBuzz | [03-conditionals-functions](https://github.com/svodnik/JS-SF-7-resources/tree/master/03-conditionals-functions#homework-due-monday-515) | Mon, 5/15 |
+03 | Closures | [04-scope-closures](https://github.com/svodnik/JS-SF-7-resources/tree/master/04-scope-closures#homework-due-monday-522) | Mon, 5/22 |
+04 | Slackbot | [05-slackbot-lab](https://github.com/svodnik/JS-SF-7-resources/tree/master/05-slackbot-lab#homework-due-monday-522) | Mon, 5/22 |
+
+
+
 
 
