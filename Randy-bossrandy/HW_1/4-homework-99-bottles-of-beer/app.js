@@ -11,7 +11,7 @@
 */
 
 //***Go ahead and try any start or end number (even negatives).
-var startBottles = -99;
+var startBottles = 99;
 var endBottles = 1;
 
 //***Replacement for number is double-pound (##).
