@@ -49,6 +49,11 @@ Weekly Homework
 02 | FizzBuzz | [03-conditionals-functions](https://github.com/svodnik/JS-SF-7-resources/tree/master/03-conditionals-functions#homework-due-monday-515) | Mon, 5/15 |
 03 | Closures | [04-scope-closures](https://github.com/svodnik/JS-SF-7-resources/tree/master/04-scope-closures#homework-due-monday-522) | Mon, 5/22 |
 04 | Slackbot | [05-slackbot-lab](https://github.com/svodnik/JS-SF-7-resources/tree/master/05-slackbot-lab#homework-due-monday-522) | Mon, 5/22 |
+05 | JSON | [06-objects-json](https://github.com/svodnik/JS-SF-7-resources/tree/master/06-objects-json#homework-due-monday-529) | Wed, 5/31 |
+06 | Madlibs, 99 Bottles of Beer, Dice | [07-dom-intro](https://github.com/svodnik/JS-SF-7-resources/tree/master/07-dom-intro#homework-due-wednesday-531) | Wed, 5/31 |
+
+
+
 
 
 
