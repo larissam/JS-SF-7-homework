@@ -4,11 +4,17 @@ var startupY = ['Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest', 'Macys', 'Do
 var newFavoriteList = [];
 
 //variable for display string
-var displayArea = document.getElementById('xForY');
+var displayGenerator = document.getElementById('xForY');
+var displayFavorites = document.getElementById('favorites');
 
 //variable for buttons
 var createNewStratupBtn = document.getElementById('create');
 var favoriteBtn = document.getElementById('save');
+var printBtn = document.getElementById('print');
+
+//init
+favoriteBtn.disabled = true;
+printBtn.disabled = true;
 
 var randomString = function () {
     var random1 = Math.floor((Math.random() * startupX.length));
@@ -21,35 +27,50 @@ var randomString = function () {
 
 function generator() {
     var newRandomString = new randomString();
-
-    if(displayArea.hasChildNodes()) {
-        displayArea.removeChild(displayArea.childNodes[0]);
+    if(displayGenerator.hasChildNodes()) {
+        displayGenerator.removeChild(displayGenerator.childNodes[0]);
     }
-    displayArea.appendChild(newRandomString);
-    newFavoriteList.push(newRandomString);
-    //return newRandomString;
-    console.log(newFavoriteList);
+    displayGenerator.appendChild(newRandomString);
+    return newRandomString;
 };
 
 createNewStratupBtn.addEventListener('click', function () {
     generator();
+    favoriteBtn.disabled = false;
+    //console.log(newFavoriteList.length );
 });
 
-function saveFavoriteList(newRandomString) {
-   // var saveGeneratorToList = new generator();
-    console.log('newRandomString');
-    console.log("2 saveGeneratorToList: ", saveGeneratorToList);
+function saveFavoriteList() {
+    var currentString = displayGenerator.innerHTML;
+    //console.log('currentString', currentString);
+    newFavoriteList.push(currentString);
+    // console.log('newFavoriteList: ', newFavoriteList);
+    // console.log('Total for newFavoriteList: ', newFavoriteList.length );
+    favoriteBtn.disabled = true;
+    printBtn.disabled = false;
 };
 
 favoriteBtn.addEventListener('click',function () {
     saveFavoriteList();
-
-    //newFavoriteList
-    //saveFavoriteList();
 });
 
+function printFavorites() {
+    if(displayFavorites.hasChildNodes()) {
+        displayFavorites.innerHTML = '';
+    }
+    var printOutput = '';
+    for (i = 0; i < newFavoriteList.length ; i++) {
+        printOutput = (i+1) + ": " + newFavoriteList[i];
+        var textTag = document.createElement("p");
+        var textNode = document.createTextNode(printOutput);
+        textTag.appendChild(textNode);
+        displayFavorites.appendChild(textTag);
+    }
+};
 
-
+printBtn.addEventListener('click', function () {
+    printFavorites();
+});
 
 
 
