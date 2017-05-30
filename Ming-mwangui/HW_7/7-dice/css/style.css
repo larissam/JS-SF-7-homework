@@ -60,9 +60,14 @@ body {
 /* Center the container */
 #container {
 	width: 960px;
-	margin: auto;
+    margin: 30px auto;
 }
 
+#content {
+    width: 380px;
+    height: 145px;
+    border: 1px solid #999;
+}
 #content span {
   width: 100px;
   height: 100px;
@@ -70,8 +75,21 @@ body {
   margin: 20px;
   background-repeat: no-repeat;
   background-position: top left;
+    float: left;
 }
-
+#roll-dice {
+    float: left;
+    margin-top: 23px;
+}
+#content #total {
+    height: 20px;
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    margin-left: -83px;
+    margin-top: 50px;
+    font-size: 20px;
+}
 .dice-1 {
   background-image: url('../img/1.png');
 }
