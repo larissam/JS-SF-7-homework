@@ -50,8 +50,34 @@ body {
      font-size: 12px;
      line-height: 1.4;
      font-family: Helvetica, Arial, sans-serif;
+     margin: 100px auto auto 200px;
 }
-
+p {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+}
+button {
+    color: #fff;
+    background: #fff;
+    font-weight: normal;
+    border: 1px solid #27abf2;
+    background-color:#27abf2;
+    height: 27px;
+    padding: 5px 9px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 8px;
+    outline: hidden;
+}
+#favorites {
+    margin-top: 35px;
+}
+.disabled {
+    border: 1px solid #999;
+    background-color: #999;
+    opacity: 0.4;
+}
 
 /******************************************
 /* LAYOUT

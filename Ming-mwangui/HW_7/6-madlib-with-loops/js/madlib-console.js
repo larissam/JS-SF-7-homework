@@ -1,6 +1,6 @@
 //variable for array
 var startupX = ['Uber', 'Google', 'Amazon', 'Apple', 'Facebook', 'Twitter', 'Amazon', 'Nike', 'BMW', 'IBM', 'Burberry', 'Samsung' ];
-var startupY = ['Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest', 'Macys', 'Dollar Tree', 'Panny', 'Coca Cola'];
+var startupY = ['Slack', 'Trello', 'Tesla', 'Hyperloop', 'Harvest', 'Macys', 'Dollar Tree', 'Panny', 'Coca Cola', 'Polycom', 'Kombucha', 'Kleenex', 'Kirkland'];
 var newFavoriteList = [];
 
 //variable for display string
@@ -12,11 +12,14 @@ var createNewStratupBtn = document.getElementById('create');
 var favoriteBtn = document.getElementById('save');
 var printBtn = document.getElementById('print');
 
-//init
+//flags
 favoriteBtn.disabled = true;
 printBtn.disabled = true;
+favoriteBtn.classList.add('disabled');
+printBtn.classList.add('disabled');
 
 var randomString = function () {
+    //random method
     var random1 = Math.floor((Math.random() * startupX.length));
     var random2 = Math.floor((Math.random() * startupY.length));
     var generatorNewStratup = 'A startup that is ' + startupX[random1] + ', but for ' + startupY[random2] + '.';
@@ -26,7 +29,9 @@ var randomString = function () {
 };
 
 function generator() {
+    //to get the result from other function
     var newRandomString = new randomString();
+    //check if node already been attach, if yes, need to remove it before add on
     if(displayGenerator.hasChildNodes()) {
         displayGenerator.removeChild(displayGenerator.childNodes[0]);
     }
@@ -37,17 +42,17 @@ function generator() {
 createNewStratupBtn.addEventListener('click', function () {
     generator();
     favoriteBtn.disabled = false;
-    //console.log(newFavoriteList.length );
+    favoriteBtn.classList.remove('disabled');
 });
 
 function saveFavoriteList() {
+    //when click and then push the currently into a new array
     var currentString = displayGenerator.innerHTML;
-    //console.log('currentString', currentString);
     newFavoriteList.push(currentString);
-    // console.log('newFavoriteList: ', newFavoriteList);
-    // console.log('Total for newFavoriteList: ', newFavoriteList.length );
     favoriteBtn.disabled = true;
+    favoriteBtn.classList.add('disabled');
     printBtn.disabled = false;
+    printBtn.classList.remove('disabled');
 };
 
 favoriteBtn.addEventListener('click',function () {
