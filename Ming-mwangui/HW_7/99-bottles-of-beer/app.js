@@ -9,17 +9,22 @@
   For an extra challenge, improve this code to print "1 bottle" rather than "1 bottles." (Hint: read up on if/else
   conditional statements at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 */
-var string0 = "bottle";
-var string1 = "bottles";
-var string2 = "of beer";
-var string3 = "on the wall";
-var string4 = "Take one down and pass it around,";
-var string5 = "of beer on the wall.";
-var string6 = "no more";
-var string7 = "Go to the store and buy some more";
+var bottle = "bottle";
+var bottles = "bottles";
+var beer = "of beer";
+var onTheWall = "on the wall";
+var takeOne = "Take one down and pass it around,";
+var beerOnWall = "of beer on the wall.";
+var noMore = "no more";
+var buy = "Go to the store and buy some more";
+
+// 99 bottles of beer on the wall, 99 bottles of beer. Take one down and pass it around, 98 bottles of beer on the wall.
+var paragraph1 = 'bottles of beer on the wall, ';
+var paragraph2 = 'bottles of beer. Take one down and pass it around, ';
+var paragraph3 = 'bottles of beer on the wall.';
+
 
 function printResult () {
-    var x= 99;
     for (var i = 99; i > 0; i-- ) {
         var msg1 = i + " " + string1 +  " " + string2 + " " + string3 + ", " + i  + " " + string1 +  " " + string2 + ". ";
         var msg2 = string4 +  " " + (i-1) + " " +string1 + " " + string2 + " " + string3 +  ". ";
