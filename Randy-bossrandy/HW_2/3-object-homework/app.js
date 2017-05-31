@@ -20,7 +20,43 @@
   // - park
 
 // Answer Starts Here
+  // 'Calender'
+  // Description: What makes up a calender.
+  // Every 'calender' has
+  // - day of week (Sun-Sat)
+  // - array of holidays
+  // - array of months (Jan-Dec)
+  // - array of days count for each month
+  // - boolean is leap year
+  // Every 'calender' can
+  // - display year view
+  // - display month view
+  // - display week view
 
+  // 'Calender Event'
+  // Description: Each event on calender.
+  // Every 'calender event' has
+  // - date
+  // - time start
+  // - time end
+  // - event title
+  // - event description
+  // Every 'calender event' can
+  // - create new
+  // - save
+  // - delete
+
+  // 'Calender Event Alarm'
+  // Description: Each event can have an alarm.
+  // Every 'calender event' has
+  // - event ID
+  // - alarm number value
+  // - alarm number type (mins, hours, days)
+  // - alarm type (vibrate, ring, ring/vibrate)
+  // Every 'calender Event Alarm' can
+  // - Add New
+  // - Save
+  // - Delete
 // Answer Ends Here
 
 
@@ -32,10 +68,13 @@
   // - a name
   // - an address
 
-var pet_owner;
+
 
 // Answer Starts Here
-
+var pet_owner = {
+    name: "Bob",
+    address: "123 Main Street"
+};
 // Answer Ends Here
 
 
@@ -51,10 +90,15 @@ var pet_owner;
   // Every pet can:
   // - make noise (each pet makes its own unique noise, as specified by `noise`.
 
-var some_pet;
+
 
 // Answer Starts Here
-
+var some_pet = {
+    name: "Mango",
+    species: "Cat",
+    breed: "short-hair",
+    noise: "meow"
+};
 // Answer Ends Here
 
 /////////////////////////////////////////////////////////////
