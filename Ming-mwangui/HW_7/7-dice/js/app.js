@@ -34,6 +34,7 @@ var secondDiceContainer = document.getElementById('second-die');
 var displayTotal = document.getElementById('content');
 
 
+
 //variable for button
 var rollBtn = document.getElementById('roll-dice');
 
@@ -41,55 +42,50 @@ var rollBtn = document.getElementById('roll-dice');
 var imageLoad = false;
 
 function rollDice(){
-  //init
-  if ( !imageLoad ) {
-    //method for random image
-    var random1 = Math.floor((Math.random() * imageStorage.length));
-    var random2 = Math.floor((Math.random() * imageStorage.length));
+  //method for random image
+  var random1 = Math.floor((Math.random() * imageStorage.length));
+  var random2 = Math.floor((Math.random() * imageStorage.length));
 
-    var firstValue = random1 + 1;
-    var secondValue = random2 + 1;
-    var total = firstValue + secondValue;
-    console.log(firstValue, secondValue, total);
+  var firstValue = random1 + 1;
+  var secondValue = random2 + 1;
+  var total = firstValue + secondValue;
+  console.log(firstValue, secondValue, total);
 
-    //match the random number with images in the storage
-    var firstDice = imageStorage[random1];
-    var secondDice = imageStorage[random2];
+  //match the random number with images in the storage
+  var firstDice = imageStorage[random1];
+  var secondDice = imageStorage[random2];
 
-    //create nodes
-    var firstDomImg = document.createElement("img");
-    var secondDomImg = document.createElement("img");
+  //create nodes
+  var firstDomImg = document.createElement("img");
+  var secondDomImg = document.createElement("img");
 
-    //add the image url into the src
-    firstDomImg.src = firstDice;
-    secondDomImg.src = secondDice;
+  //add the image url into the src
+  firstDomImg.src = firstDice;
+  secondDomImg.src = secondDice;
 
-    //append images to the DOM
-    firstDiceContainer.appendChild(firstDomImg);
-    secondDiceContainer.appendChild(secondDomImg);
-
-    //flag for image loaded or not
-    imageLoad = true;
-
-  } else {
+  if(firstDiceContainer.hasChildNodes()) {
     firstDiceContainer.removeChild(firstDiceContainer.lastChild);
     secondDiceContainer.removeChild(secondDiceContainer.lastChild);
-    imageLoad = false;
+  }
+
+  firstDiceContainer.appendChild(firstDomImg);
+  secondDiceContainer.appendChild(secondDomImg);
+
     //textTag.removeChild(textNode);
     //displayTotal.removeChild(textTag);
-  };
+
 };
 
 rollBtn.addEventListener('click', function () {
   rollDice();
 });
 
-//
-// // count totall number
-// var textTag = document.createElement("span");
-// textTag.setAttribute('id','total');
-// var textNode = document.createTextNode(firstValue + secondValue);
-// textTag.appendChild(textNode);
-// //console.log(textTag.appendChild(textNode));
-// displayTotal.appendChild(textTag);
+
+// count totall number
+var textTag = document.createElement("span");
+textTag.setAttribute('id','total');
+var textNode = document.createTextNode(firstValue + secondValue);
+textTag.appendChild(textNode);
+//console.log(textTag.appendChild(textNode));
+displayTotal.appendChild(textTag);
 
