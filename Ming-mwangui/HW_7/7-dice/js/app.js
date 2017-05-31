@@ -33,8 +33,6 @@ var firstDiceContainer = document.getElementById('first-die');
 var secondDiceContainer = document.getElementById('second-die');
 var displayTotal = document.getElementById('content');
 
-
-
 //variable for button
 var rollBtn = document.getElementById('roll-dice');
 
@@ -49,7 +47,6 @@ function rollDice(){
   var firstValue = random1 + 1;
   var secondValue = random2 + 1;
   var total = firstValue + secondValue;
-  console.log(firstValue, secondValue, total);
 
   //match the random number with images in the storage
   var firstDice = imageStorage[random1];
@@ -63,29 +60,26 @@ function rollDice(){
   firstDomImg.src = firstDice;
   secondDomImg.src = secondDice;
 
-  if(firstDiceContainer.hasChildNodes()) {
+  // count totall number
+  var textTag = document.createElement("span");
+  textTag.setAttribute('id','total');
+  var textNode = document.createTextNode('Total: ' + total);
+  textTag.appendChild(textNode);
+
+  if( firstDiceContainer.hasChildNodes() || secondDiceContainer.hasChildNodes() ) {
     firstDiceContainer.removeChild(firstDiceContainer.lastChild);
     secondDiceContainer.removeChild(secondDiceContainer.lastChild);
   }
 
+  if( displayTotal.hasChildNodes() ) {
+        displayTotal.removeChild(displayTotal.lastChild);
+  }
+
   firstDiceContainer.appendChild(firstDomImg);
   secondDiceContainer.appendChild(secondDomImg);
-
-    //textTag.removeChild(textNode);
-    //displayTotal.removeChild(textTag);
-
+  displayTotal.appendChild(textTag);
 };
 
 rollBtn.addEventListener('click', function () {
   rollDice();
 });
-
-
-// count totall number
-var textTag = document.createElement("span");
-textTag.setAttribute('id','total');
-var textNode = document.createTextNode(firstValue + secondValue);
-textTag.appendChild(textNode);
-//console.log(textTag.appendChild(textNode));
-displayTotal.appendChild(textTag);
-
