@@ -10,6 +10,7 @@
   conditional statements at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else). 
 */
 
+
 for (counter = 99; counter >= 1; counter = counter -1) {
 		console.log(counter+ " " +"bottles of beer on the wall,"); 
 	if (counter < 99) {
