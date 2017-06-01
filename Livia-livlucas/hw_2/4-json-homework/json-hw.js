@@ -19,7 +19,7 @@ with the date the photo was taken. The first console.log should return the follo
 
 */
 
-function jsObject () {
+function jsObject() {
 	var i;
 
 	for (i = 1; i < flickrObj.items.length; i += 1) {
@@ -34,7 +34,7 @@ function jsObject () {
 */
 var links = [];
 
-function linkStore () {
+function linkStore() {
 	var i;
 
 	for (var i = 0; i < flickrObj.items.length; i++) {
