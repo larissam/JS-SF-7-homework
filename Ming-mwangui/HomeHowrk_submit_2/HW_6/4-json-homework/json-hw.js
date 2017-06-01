@@ -29,7 +29,7 @@ for (i = 0; i < flickrObj.items.length; i++ ) {
     console.log(flickrObj.items[i].title + " " +flickrObj.items[i].published);
 };
 
-// by using forEach method
+// if using forEach method
 // flickrObj.items.forEach(function (i) {
 //     for (var prop in i) {
 //         console.log(
