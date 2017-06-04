@@ -12,10 +12,8 @@ var finalLine2 = ' bottles of beer on the wall.';
 var totalNum = [];
 
 //variable for ul
-var $ul = $('<ul>');
-$('body').add($ul);
-
-//document.body.appendChild($ul);
+var $ul = $('<ul></ul>');
+$('body').append($ul);
 
 function printResult () {
     for ( var i = 99; i > 0; i-- ) {
@@ -24,15 +22,14 @@ function printResult () {
         if (i == 1) {
             var msg1 = i + singular + paragraph1 + i + singular + paragraph2 + paragraph4 + plural + paragraph3;
         };
-        var $li = $("<li> msg1 </li>");
-        $('#result').add($li);
-        console.log('test', $li);
-        //$ul.add($li);
+        var $li = $("<li></li>");
+        $li.append(msg1);
+        $ul.append($li);
     }
-        // var $finalContainer = document.createElement("li");
-        // var finalText = document.createTextNode(finalLine1 + totalNum.length + finalLine2);
-        // $finalContainer.append(finalText);
-        // $ul.add($finalContainer);
+        var $finalContainer = $("<li></li>", {'class': 'final'});
+        var finalText = (finalLine1 + totalNum.length + finalLine2);
+        $finalContainer.append(finalText);
+        $ul.append($finalContainer);
 };
 
 printResult();
