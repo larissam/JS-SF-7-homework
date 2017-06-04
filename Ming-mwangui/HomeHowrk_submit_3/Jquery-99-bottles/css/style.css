@@ -1,0 +1,18 @@
+body {
+    color: #555;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-bottom: 100px;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    padding: 3px;
+}
+.final {
+    color: #27abf2;
+}

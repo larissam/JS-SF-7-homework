@@ -1,0 +1,49 @@
+body {
+    margin-top: 40px;
+    color: #999;
+}
+input {
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    padding: 4px;
+    padding: 0 20px;
+    background-color: #FFA200;
+    margin-left: 8px;
+    outline: none;
+}
+button {
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    padding: 0 20px;
+    background-color: #122b40;
+    outline: none;
+    margin-left: 8px;
+}
+input[type="text"] {
+    width: 50%;
+    outline: none;
+    display: inline-block;
+}
+
+label {
+    display: block;
+}
+#surveyList {
+   padding-top: 15px;
+}
+
+.form-group.padout {
+    padding: 0px 10px 15px;
+}
+
+label, .label {
+    font-size: 14px;
+    color: #666;
+    padding: 0px;
+    display: block;
+    text-align: left;
+}
