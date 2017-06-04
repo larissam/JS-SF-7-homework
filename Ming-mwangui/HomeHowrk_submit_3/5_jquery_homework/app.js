@@ -16,25 +16,24 @@ Note: This project uses Bootstrap, which is a CSS framework that provides prebui
 Make sure the new questions you add to the survey use the same class names as in the sample form questions to take advantage of Bootstrap styles.
 */
 
-$("#surveyList li").each(function() {
-    var $removeButton = $('<button>').html("Remove question");
-    $removeButton.addClass('answer');
-    $(this).append($removeButton);
-});
-
 var $addNewBtn = $('#addQuestion');
-//$addNewBtn.attr("disabled","disabled");
+$addNewBtn.attr("disabled","disabled");
 $addNewBtn.css('opacity', '0.4');
+var checkInput = false;
+
+$('#question').keyup( function () {
+    checkInput = true;
+    $addNewBtn.removeAttr("disabled");
+    $addNewBtn.css('opacity', '1');
+});
 
 $addNewBtn.on('click', function(e) {
     e.preventDefault();
     var val = $('#question').val();
-    if ( val == '') {
-        console.log('empty');
-
-    } else {
-        //$addNewBtn.attr("disabled","enable");
-        $addNewBtn.css('opacity', '1');
+    if ( !checkInput) {
+        checkInput = false;
+        console.log('false');
+    } else if (checkInput) {
         var $newLi = $('<li class="form-group padout"></li>');
         var $newQuestion = $('<label class="label"></label>');
         var $newString =  val;
@@ -47,6 +46,10 @@ $addNewBtn.on('click', function(e) {
         $removeButton.addClass('answer');
         $newLi.append($removeButton);
         $('#surveyList').append($newLi);
-
+        $('#question').val('');
+        checkInput = false;
+        $addNewBtn.attr("disabled","disabled");
+        $addNewBtn.css('opacity', '0.4');
     }
 });
+
