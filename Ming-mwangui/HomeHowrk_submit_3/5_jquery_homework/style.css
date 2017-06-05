@@ -2,6 +2,12 @@ body {
     margin-top: 40px;
     color: #999;
 }
+h1{
+    color: #888;
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
 input {
     height: 33px;
     border-radius: 20px;
@@ -9,31 +15,51 @@ input {
     color: #fff;
     padding: 4px;
     padding: 0 20px;
-    background-color: #FFA200;
-    margin-left: 8px;
+    background-color: #777;
+    font-size: 12px;
+    margin-left: 12px;
     outline: none;
 }
 button {
     height: 33px;
     border-radius: 20px;
     border: none;
-    color: #fff;
+    color: #888;
     padding: 0 20px;
-    background-color: #122b40;
+    background-color: #e1e1e1;
     outline: none;
-    margin-left: 8px;
+    margin-left: 12px;
+    border: 1px solid #bbb;
 }
-input[type="text"] {
+#question {
     width: 50%;
     outline: none;
     display: inline-block;
+    margin: 0px;
+    top: -7px;
+    position: relative;
+    color: #888888;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-control {
+    width: 50%;
+    outline: none;
+    display: inline-block;
+    margin: 0px;
 }
 
 label {
     display: block;
 }
+#addQuestion {
+    top: -7px;
+    position: relative;
+}
 #surveyList {
-   padding-top: 15px;
+   padding-top: 13px;
     min-height: 50px;
 }
 
@@ -42,9 +68,22 @@ label {
 }
 
 label, .label {
-    font-size: 14px;
-    color: #666;
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
     padding: 0px;
-    display: block;
+    display: inline-block;
     text-align: left;
+    width: 90%;
+}
+.bg-info {background-color: #f2f2f2;}
+#surveyList {
+    list-style-position: inside;
+    color: #888;
+    font-size: 12px;
+}
+#surveyList li {
+    border-bottom: 1px solid #fff;
+    margin-left: -39px;
+    padding: 0px 10px 16px;
 }

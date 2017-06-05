@@ -25,7 +25,9 @@ $("#surveyList li").each(function() {
 //variable for elements
 var $addNewBtn = $('#addQuestion');
 $addNewBtn.attr("disabled","disabled");
-$addNewBtn.css('opacity', '0.4');
+
+//$('button').css('opacity', '0.7');
+
 var $input = $('#question');
 var checkInput = false;
 var buttonLength = 2;
@@ -36,6 +38,9 @@ $input.keyup( function () {
         checkInput = true;
         $addNewBtn.removeAttr("disabled");
         $addNewBtn.css('opacity', '1');
+    } else {
+        $addNewBtn.attr("disabled","disabled");
+        $addNewBtn.css('opacity', '0.7');
     }
 });
 
@@ -63,7 +68,7 @@ $addNewBtn.on('click', function(e) {
         $('#question').val('');
         checkInput = false;
         $addNewBtn.attr("disabled","disabled");
-        $addNewBtn.css('opacity', '0.4');
+        $addNewBtn.css('opacity', '0.7');
         buttonLength ++;
 
         console.log("buttonLength: ", buttonLength );
