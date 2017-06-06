@@ -1,0 +1,89 @@
+body {
+    margin-top: 40px;
+    color: #999;
+}
+h1{
+    color: #888;
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+input {
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    padding: 4px;
+    padding: 0 20px;
+    background-color: #777;
+    font-size: 12px;
+    margin-left: 12px;
+    outline: none;
+}
+button {
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    color: #888;
+    padding: 0 20px;
+    background-color: #e1e1e1;
+    outline: none;
+    margin-left: 12px;
+    border: 1px solid #bbb;
+}
+#question {
+    width: 50%;
+    outline: none;
+    display: inline-block;
+    margin: 0px;
+    top: -7px;
+    position: relative;
+    color: #888888;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.form-control {
+    width: 50%;
+    outline: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+label {
+    display: block;
+}
+#addQuestion {
+    top: -7px;
+    position: relative;
+}
+#surveyList {
+   padding-top: 13px;
+    min-height: 50px;
+}
+
+.form-group.padout {
+    padding: 0px 10px 15px;
+}
+
+label, .label {
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
+    padding: 0px;
+    display: inline-block;
+    text-align: left;
+    width: 90%;
+}
+.bg-info {background-color: #f2f2f2;}
+#surveyList {
+    list-style-position: inside;
+    color: #888;
+    font-size: 12px;
+}
+#surveyList li {
+    border-bottom: 1px solid #fff;
+    margin-left: -39px;
+    padding: 0px 10px 16px;
+}
