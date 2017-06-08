@@ -53,6 +53,9 @@ Weekly Homework
 06 | Madlibs, 99 Bottles of Beer, Dice | [07-dom-intro](https://github.com/svodnik/JS-SF-7-resources/tree/master/07-dom-intro#homework-due-wednesday-531) | Wed, 5/31 |
 07 | 99 Bottles of Beer (jQuery) | [08-jquery](https://github.com/svodnik/JS-SF-7-resources/tree/master/08-jquery#homework-due-monday-65) | Mon, 6/5 |
 08 | jQuery | [09-jquery-cont](https://github.com/svodnik/JS-SF-7-resources/tree/master/09-jquery-cont#homework-due-monday-612) | Mon, 6/12 |
+09 | Weather Data Project | [10-ajax-apis](https://github.com/svodnik/JS-SF-7-resources/tree/master/10-ajax-apis#homework-due-monday-612) | Mon, 6/12 |
+
+
 
 
 
