@@ -16,44 +16,36 @@ Note: This project uses Bootstrap, which is a CSS framework that provides prebui
 Make sure the new questions you add to the survey use the same class names as in the sample form questions to take advantage of Bootstrap styles.
 */
 
-//attach remore quextion button for first 2 buttons
-$("#surveyList li").each(function() {
-    var $removeButton = $('<button>').html("Remove question");
-    $(this).append($removeButton);
-});
+//attach remore question button for first 2 buttons
+$("#surveyList li").append($('<button>').html("Remove question"));
 
 //variable for elements
-var $addNewBtn = $('#addQuestion');
-$addNewBtn.attr("disabled","disabled");
+$('#addQuestion').attr("disabled","disabled");
 
-//$('button').css('opacity', '0.7');
-
-var $input = $('#question');
+//flag
 var checkInput = false;
 var buttonLength = 2;
 
 //validation for input filed
-$input.keyup( function () {
-    if ($input.val().length > 0) {
+$('#question').keyup( function () {
+    if ($('#question').val().length > 0) {
         checkInput = true;
-        $addNewBtn.removeAttr("disabled");
-        $addNewBtn.css('opacity', '1');
+        $('#addQuestion').removeAttr("disabled");
+        $('#addQuestion').css('opacity', '1');
     } else {
-        $addNewBtn.attr("disabled","disabled");
-        $addNewBtn.css('opacity', '0.7');
+        $('#addQuestion').attr("disabled","disabled");
+        $('#addQuestion').css('opacity', '0.7');
     }
 });
 
 //add new question
-$addNewBtn.on('click', function(e) {
-    e.preventDefault();
-    var val = $('#question').val();
-
-    if ( checkInput) {
+$('#addQuestion').on('click', false, function(e) {
+    if ( checkInput ) {
+        //create jquery elements
         var $newLi = $('<li class="form-group padout"></li>');
         var $newQuestion = $('<label class="label"></label>');
-        var $newString =  val;
-        $newQuestion.append($newString);
+
+        $newQuestion.append($('#question').val());
         $newLi.append($newQuestion);
 
         var $anser = $('<input type="text" class="form-control">');
@@ -67,34 +59,29 @@ $addNewBtn.on('click', function(e) {
 
         $('#question').val('');
         checkInput = false;
-        $addNewBtn.attr("disabled","disabled");
-        $addNewBtn.css('opacity', '0.7');
+        $('#addQuestion').attr("disabled","disabled");
+        $('#addQuestion').css('opacity', '0.7');
         buttonLength ++;
 
-        console.log("buttonLength: ", buttonLength );
-
-        $removeButton.on('click', function (e) {
+        //remove jquery question button
+        $removeButton.on('click', false, function (e) {
             if (buttonLength > 2){
-                e.preventDefault();
                 buttonLength --;
-                e.preventDefault();
                 $(this).parent().remove();
             } else {
-                e.preventDefault();
                 alert('Chain at least 2 methods');
             }
         });
     }
 });
 
-//validation for remove button
-$('button').on('click', function (e) {
+
+//remove question button if list in the HTML
+$('button').on('click', false, function (e) {
     if (buttonLength > 2 ) {
-        e.preventDefault();
         $(this).parent().remove();
         buttonLength --;
     } else {
-        e.preventDefault();
         alert('Chain at least 2 methods');
     }
 });
