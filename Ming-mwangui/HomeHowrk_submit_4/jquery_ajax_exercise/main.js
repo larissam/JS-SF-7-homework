@@ -3,13 +3,13 @@
 //openweathermap
 var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?";
 var target = "zip=94102,us";
-var apiKey = "xxx";
+var apiKey = "your api key here";
 var weatherinSF = weatherUrl + target + '&APPID=' + apiKey;
 
 //weatherunlocked
 var unLockedUrl = "http://api.weatherunlocked.com/api/current/us.94102?app_id=";
 var appId = "cb51ba88";
-var key = "xxx";
+var key = "your api key here";
 var unLockedWeatherSF = unLockedUrl + appId + '&app_key='+ key;
 
 //global function for re-use
@@ -19,7 +19,7 @@ function makeRequest(url, callBackFunciton) {
     });
 }
 
-//display data
+//display data method
 function openWeatherMapData(respaon) {
   var degF = (respaon.main.temp - 273.15) * 1.8 + 32;
   var degFInt = Math.floor(degF);
@@ -42,9 +42,9 @@ $('#getTemp').on('click', function (e) {
     var keyin = city+ ',' +state;
 
     if (city != '' && state != '') {
-        makeRequest(weatherinSF, inquiryData);
+        makeRequest(weatherUrl + 'q=' + keyin + '&APPID=' + apiKey, inQuiryData);
 
-        function inquiryData(respone) {
+        function inQuiryData(respone) {
             var degF = (respone.main.temp - 273.15) * 1.8 + 32;
             var degFInt = Math.floor(degF);
             $('#temp3').html(degFInt + '°С');
