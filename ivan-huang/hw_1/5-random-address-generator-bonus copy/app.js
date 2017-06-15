@@ -9,34 +9,12 @@ Optional bonus work on conditionals and functions:
     34578 Dolphin Street, Wonka NY, 44506
 */
 
-var streetNumber = [];
-streetNumber.push("11");
-streetNumber.push("22");
-streetNumber.push("33");
+var streetNumber = ["11", "22", "33"];
+var streetName = ["Jason street", "Jason street", "Andy street"];
+var cityName = ["Urguay", "Syria", "Iran"];
+var stateName = ["CA", "NV", "NY"];
+var zipCode = ["11111", "22222", "33333"];
 
-
-var streetName = [];
-streetName.push("Jason street");
-streetName.push("Andy street");
-streetName.push("Freddy street");
-
-
-var cityName = [];
-cityName.push("Urguay");
-cityName.push("Syria");
-cityName.push("Iran");
-
-
-var stateName = [];
-stateName.push("CA");
-stateName.push("NV");
-stateName.push("NY");
-
-
-var zipCode = [];
-zipCode.push("11111")
-zipCode.push("22222")
-zipCode.push("33333")
 
 var temp = "";
 

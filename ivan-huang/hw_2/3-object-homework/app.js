@@ -43,7 +43,7 @@
   // Every 'owner' has:
   // - a name
   // - an address
-
+/*
 var pet_owner = new Object();
 
 // Answer Starts Here
@@ -53,7 +53,14 @@ pet_owner.address = "55 Uganda St.",
 pet_owner.phoneNumber = "4157778727",
 pet_owner.emailAddress = "stacyanderson2@aol.com"
 // Answer Ends Here
+*/
 
+var pet_owner = {
+  name: "stacy anderson",
+  address: "55 Uganda St.",
+  phoneNumber: "4157771234",
+  emailAddress: "stacyanderson2@aol.com"
+};
 
 // 3. Create an Object literal that lines up with the following description. Store it in the variable `some_pet`, below.
 
@@ -69,12 +76,12 @@ pet_owner.emailAddress = "stacyanderson2@aol.com"
 
 
 // Answer Starts Here
-function some_pet(name, species, breed, noise) {
-  this.name = name
-  this.species = species
-  this.breed = breed
-  this.noise = noise
-}
+var some_pet = {
+  name: "Rover",
+  species: "wild dog",
+  breed: "wild dawg",
+  noise: "Arfffff"
+};
 // Answer Ends Here
 
 /////////////////////////////////////////////////////////////

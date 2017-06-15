@@ -26,7 +26,6 @@ for (counter = 99; counter >= 1; counter = counter - 1)
     console.log(counter+" "+bottles+" of beer.");
     console.log("Take one down, Pass it around.");
     if (counter == 1) {
-        console.log("No more bottles of beer on the wall, no more bottles of beer");
-        console.log("Go to the store and buy some more, 99 bottles of beer on the wall.")
+        console.log("\n" + counter + " " + bottles + " of beer on the wall.");
     }
 }

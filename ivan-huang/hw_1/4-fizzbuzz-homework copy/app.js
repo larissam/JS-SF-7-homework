@@ -32,7 +32,7 @@
 // Add an additional `else if` clause that logs the string `"fizzbuzz"` if the value being iterated over is divisible by both `3` and `5`.
 
 var number;
-for (number =1; number <= 100; number++) 
+for (var number = 1; number <= 100; number++) 
 {
     if (number%3===0 && number%5===0) {
         console.log("fizzbuzz");
