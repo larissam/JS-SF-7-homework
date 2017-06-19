@@ -1,6 +1,6 @@
   $(document).ready(function () {
     _500px.init({      //references the 500px jquery library
-      sdk_key: '680efebbcac7363f13af82982e5da0b21beec254'
+      sdk_key: 'XXX'
     });
 
     $('#login').click(function(){
