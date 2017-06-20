@@ -10,3 +10,17 @@
     3. Then figure out how to make that function repeat a set number of times.
 */
 
+
+(function demo(makeAnumber) {
+    for(var i=0; i <= makeAnumber; i++) {
+        (function countDown(Num) {
+            setTimeout(function () {
+                var box =  document.createElement("p");
+                var text = document.createTextNode(Num);
+                box.appendChild(text);
+                document.body.appendChild(box);
+                console.log( box );
+            }, Num * 1000)
+        } (i));
+    };
+}(20));
