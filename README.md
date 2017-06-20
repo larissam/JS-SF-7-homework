@@ -56,4 +56,7 @@ Weekly Homework
 09 | Weather Data Project | [10-ajax-apis](https://github.com/svodnik/JS-SF-7-resources/tree/master/10-ajax-apis#homework-due-monday-612) | Mon, 6/12 |
 10 | 500px Account | [11-async-callbacks](https://github.com/svodnik/JS-SF-7-resources/tree/master/11-async-callbacks#homework-due-wednesday-614) | Wed, 6/14 |
 11 | Local Landscapes App | [12-advanced-apis](https://github.com/svodnik/JS-SF-7-resources/tree/master/12-advanced-apis#homework-due-monday-519) | Mon, 6/19 |
+12 | Feedr App | [13-feedr-lab](https://github.com/svodnik/JS-SF-7-resources/tree/master/13-feedr-lab#homework-due-wednesday-75-which-is-16-days-from-today) | Wed, 7/5 |
+
+
 
