@@ -24,7 +24,7 @@
 
 //weatherunlocked
 var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?zip=94102,us";
-var apiKey = "08f18cb8c4d95b94367d4ec2a3e5ed08";
+var apiKey = "your key here";
 var url = weatherUrl;
 $.get(url + '&APPID=' + apiKey, function (respone) {
     console.log(respone);
@@ -40,7 +40,7 @@ function openWeatherMapData(respone) {
 //openweathermap
 var api = "http://api.weatherunlocked.com/api/current/us.94102?app_id=";
 var appId = "cb51ba88";
-var key = "fe3f7f34e90c5b48695c88c66b20ee35";
+var key = "your key here";
 
 $.get(api+ appId + '&app_key='+ key, function (respone) {
     console.log('respone', respone);
