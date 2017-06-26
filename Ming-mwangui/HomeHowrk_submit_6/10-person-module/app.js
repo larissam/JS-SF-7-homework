@@ -13,6 +13,55 @@
 	3. Write statements that test all of your module's methods and verify that they all work as expected.
 */
 
+
+var car = (function(kind) {
+    var fuel = 2;
+    this.kind = kind;
+
+    return {
+        start: function () {
+            if (fuel === 0) {
+                console.log('out of gas');
+            } else {
+                console.log('started and ready to go');
+            }
+        },
+
+        drive: function () {
+            if (fuel === 0) {
+                console.log('Vroom!');
+            } else {
+                fuel--;
+                console.log(fuel);
+            }
+        },
+        refuel: function () {
+            fuel = 2;
+            console.log('the current fuel is: ', fuel );
+        },
+        getMake: function () {
+            console.log(kind);
+        },
+        tradIn: function (newCar) { //not finish yet
+            car(newCar);
+            console.log(newCar);
+        }
+    };
+
+// add code here to return methods that interact with private variables
+
+})('Tesla');
+
+car.start();
+car.drive();
+car.drive();
+car.drive();
+car.refuel();
+car.getMake();
+
+
+
+
 function dailOutList(name, time, subject) {
     this.name = name;
     this.time = time;
