@@ -60,14 +60,14 @@ var kids = function (name, age) {
         },
 
         get_age: function (kidnum) {
-            if (kids.length === 0 || kidnum > (kids.length) || kidnum <= 0)
+            if (kidlist.length === 0 || kidnum > (kidlist.length) || kidnum <= 0)
                 return;
 
             console.log('Age: ' + kidlist[kidnum - 1].age);
         },
 
         get_name: function (kidnum) {
-            if (kids.length === 0 || kidnum > (kids.length) || kidnum <= 0)
+            if (kidlist.length === 0 || kidnum > (kidlist.length) || kidnum <= 0)
                 return;
 
             console.log('Name: ' + kidlist[kidnum - 1].name);
