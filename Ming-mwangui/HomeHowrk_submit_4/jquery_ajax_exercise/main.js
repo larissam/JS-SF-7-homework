@@ -15,7 +15,7 @@ var unLockedWeatherSF = unLockedUrl + appId + '&app_key='+ key;
 //global function for re-use
 function makeRequest(url, callBackFunciton) {
     $.get(url, function (respaon) {
-        callBackFunciton(respaon);
+      callBackFunciton(respaon);
     });
 }
 
@@ -27,8 +27,8 @@ function openWeatherMapData(respaon) {
 }
 
 function weatherUnLockedData(respone) {
-    var temp = Math.floor(respone.temp_f);
-    $('#temp2').html(temp + '°С');
+  var temp = Math.floor(respone.temp_f);
+  $('#temp2').html(temp + '°С');
 }
 
 makeRequest(weatherinSF, openWeatherMapData);
