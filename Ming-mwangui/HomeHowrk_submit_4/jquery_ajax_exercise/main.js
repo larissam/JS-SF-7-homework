@@ -21,9 +21,9 @@ function makeRequest(url, callBackFunciton) {
 
 //display data method
 function openWeatherMapData(respaon) {
-    var degF = (respaon.main.temp - 273.15) * 1.8 + 32;
-    var degFInt = Math.floor(degF);
-    $('#temp').html(degFInt + '°С');
+  var degF = (respaon.main.temp - 273.15) * 1.8 + 32;
+  var degFInt = Math.floor(degF);
+  $('#temp').html(degFInt + '°С');
 }
 
 function weatherUnLockedData(respone) {
