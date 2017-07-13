@@ -1,0 +1,47 @@
+
+
+header {
+ text-align: center;
+ font-family: Lucida Sans Unicode;
+}
+
+body {
+ background: #CCCCCC url("http://cdn.wallpapersafari.com/10/53/1yMSnK.jpg") no-repeat fixed center;
+}
+
+h1{
+ font-size: 50px;
+ font-family: Chalkduster;
+ color: #ffcc00;
+}
+
+section {
+ margin-top: 50px;
+ font-family: Lucida Sans Unicode;
+ color: #ffffff;
+}
+
+#resultItem {
+ padding-left: 16px;
+ padding-bottom: 5px;
+}
+
+#origin{
+ border-radius: 5px;
+ font-size: 18px;
+}
+
+#price{
+ border-radius: 5px;
+ font-size: 18px;
+}
+
+#search-button {
+ cursor: pointer;
+ border-radius: 5px;
+ padding: 5px;   
+ font-size: 18px;
+ letter-spacing: 1px;
+ background-color: #ffcc00;
+ color: #248f8f;
+}
